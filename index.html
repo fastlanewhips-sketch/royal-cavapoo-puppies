@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +7,7 @@
 
 <title>Royal Cavapoo Puppies | Loving Companions</title>
 
-<meta name="description" content="Meet our beautiful Cavapoo puppies and learn about our loving Cavapoo family. Contact Royal Cavapoo Puppies for puppy inquiries and reservations.">
+<meta name="description" content="Discover Royal Cavapoo Puppies, meet our puppies and their parents, and contact us about puppy inquiries and holiday litter reservations.">
 
 <style>
 :root {
@@ -47,13 +48,14 @@ a {
 header {
   background: var(--navy);
   color: white;
-  padding: 18px 15px;
+  padding: 20px 15px;
   text-align: center;
+  border-bottom: 3px solid var(--gold);
 }
 
 .logo {
   font-family: Georgia, serif;
-  font-size: 27px;
+  font-size: 28px;
   color: var(--gold);
   font-weight: bold;
 }
@@ -61,17 +63,16 @@ header {
 header p {
   font-size: 12px;
   letter-spacing: 2px;
-  margin-top: 4px;
+  margin-top: 5px;
 }
 
 nav {
-  background: #ffffff;
+  background: white;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 18px;
-  padding: 13px 10px;
-  border-bottom: 1px solid #e8dfd0;
+  gap: 16px;
+  padding: 15px 10px;
 }
 
 nav a {
@@ -85,7 +86,6 @@ nav a:hover {
 }
 
 .hero {
-  position: relative;
   min-height: 570px;
   display: flex;
   align-items: center;
@@ -93,8 +93,7 @@ nav a:hover {
   text-align: center;
   padding: 30px 20px;
   background:
-    linear-gradient(rgba(10, 20, 35, 0.55),
-    rgba(10, 20, 35, 0.55)),
+    linear-gradient(rgba(10,20,35,.55), rgba(10,20,35,.55)),
     url("Homepage.jpg") center 45% / cover no-repeat;
   color: white;
 }
@@ -105,7 +104,7 @@ nav a:hover {
 
 .hero h1 {
   font-family: Georgia, serif;
-  font-size: clamp(34px, 7vw, 58px);
+  font-size: clamp(35px, 7vw, 58px);
   line-height: 1.2;
   margin-bottom: 20px;
 }
@@ -115,24 +114,19 @@ nav a:hover {
   margin-bottom: 25px;
 }
 
-.gold {
-  color: var(--gold);
-}
-
 .btn {
   display: inline-block;
   background: var(--gold);
   color: var(--navy);
-  padding: 13px 25px;
+  padding: 13px 23px;
   border-radius: 5px;
   font-weight: bold;
   margin: 5px;
-  transition: 0.2s;
+  transition: .2s;
 }
 
 .btn:hover {
   background: #e2c37e;
-  transform: translateY(-2px);
 }
 
 .btn-outline {
@@ -142,7 +136,12 @@ nav a:hover {
 }
 
 section {
-  padding: 65px 18px;
+  padding: 60px 18px;
+}
+
+.container {
+  max-width: 1150px;
+  margin: auto;
 }
 
 .section-title {
@@ -158,7 +157,7 @@ section {
 }
 
 .section-title p {
-  max-width: 650px;
+  max-width: 700px;
   margin: auto;
   color: #666;
 }
@@ -168,11 +167,6 @@ section {
   height: 3px;
   background: var(--gold);
   margin: 15px auto;
-}
-
-.container {
-  max-width: 1150px;
-  margin: auto;
 }
 
 .puppy-grid {
@@ -185,12 +179,7 @@ section {
   background: white;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 5px 22px rgba(0,0,0,0.08);
-  transition: 0.25s;
-}
-
-.puppy-card:hover {
-  transform: translateY(-5px);
+  box-shadow: 0 5px 22px rgba(0,0,0,.08);
 }
 
 .puppy-card img {
@@ -209,7 +198,7 @@ section {
 }
 
 .puppy-info h4 {
-  color: var(--gold);
+  color: #a17a35;
   font-size: 14px;
   margin-bottom: 10px;
 }
@@ -280,6 +269,10 @@ section {
 
 .holiday-section h2 {
   color: var(--gold);
+}
+
+.holiday-section .section-title p {
+  color: white;
 }
 
 .holiday-box {
@@ -353,42 +346,6 @@ section {
   color: var(--navy);
   font-weight: bold;
   overflow-wrap: anywhere;
-}
-
-.contact-form {
-  margin-top: 25px;
-  text-align: left;
-}
-
-.contact-form label {
-  display: block;
-  margin-top: 15px;
-  font-weight: bold;
-  color: var(--navy);
-}
-
-.contact-form input,
-.contact-form select,
-.contact-form textarea {
-  width: 100%;
-  padding: 13px;
-  margin-top: 6px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  font-family: inherit;
-  font-size: 15px;
-}
-
-.contact-form textarea {
-  min-height: 120px;
-}
-
-.contact-form button {
-  width: 100%;
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
-  margin-top: 20px;
 }
 
 footer {
@@ -478,205 +435,104 @@ footer a {
       <div class="gold-line"></div>
       <p>
         Discover the unique personalities of our adorable Cavapoo puppies.
-        Each puppy deserves a loving and responsible forever home.
       </p>
     </div>
 
     <div class="puppy-grid">
 
-      <!-- MOLLY -->
+      <div class="puppy-card">
+        <img src="Bella.jpg" alt="Bella the Cavapoo puppy">
+        <div class="puppy-info">
+          <h3>Bella</h3>
+          <h4>The Sweet Little Princess</h4>
+          <p>Bella is a charming little sweetheart with a gentle personality and a playful spirit. Her adorable expression makes her a joy to be around.</p>
+          <p><strong>Age:</strong> 10 weeks</p>
+          <div class="price">$1,000</div>
+          <a class="btn" href="mailto:royalcavapoopuppies4@gmail.com?subject=Inquiry%20About%20Bella&body=Hello%20Royal%20Cavapoo%20Puppies%2C%0A%0AI%20am%20interested%20in%20Bella.%0APuppy%3A%20Bella%0APrice%3A%20%241%2C000%0AAge%3A%2010%20weeks%0A%0APlease%20send%20me%20more%20information%20about%20Bella.%0A%0AThank%20you.">Inquire About Bella</a>
+        </div>
+      </div>
 
       <div class="puppy-card">
         <img src="Molly.jpg" alt="Molly the Cavapoo puppy">
-
         <div class="puppy-info">
           <h3>Molly</h3>
           <h4>The Sweet Little Charmer</h4>
-
-          <p>
-            Molly is a precious little sweetheart with a gentle,
-            affectionate personality. Her adorable expression and
-            playful spirit make her a joy to be around.
-          </p>
-
-          <p><strong>Gender:</strong> Female</p>
+          <p>Molly is a precious little sweetheart with a gentle, affectionate personality. Her playful spirit makes her a delightful companion.</p>
           <p><strong>Age:</strong> 10 weeks</p>
-
           <div class="price">$1,000</div>
-
-          <a href="#contact" class="btn">Inquire About Molly</a>
+          <a class="btn" href="mailto:royalcavapoopuppies4@gmail.com?subject=Inquiry%20About%20Molly&body=Hello%20Royal%20Cavapoo%20Puppies%2C%0A%0AI%20am%20interested%20in%20Molly.%0APuppy%3A%20Molly%0APrice%3A%20%241%2C000%0AAge%3A%2010%20weeks%0A%0APlease%20send%20me%20more%20information%20about%20Molly.%0A%0AThank%20you.">Inquire About Molly</a>
         </div>
       </div>
-
-      <!-- HUGO -->
 
       <div class="puppy-card">
         <img src="Hugo.jpg" alt="Hugo the Cavapoo puppy">
-
         <div class="puppy-info">
           <h3>Hugo</h3>
           <h4>The Little Gentleman</h4>
-
-          <p>
-            Hugo is a charming little companion with a curious
-            expression and an affectionate nature. He is sure
-            to bring plenty of smiles and memorable moments.
-          </p>
-
-          <p><strong>Gender:</strong> Male</p>
+          <p>Hugo is a charming little companion with a curious expression and an affectionate nature. He is sure to bring plenty of smiles.</p>
           <p><strong>Age:</strong> 10 weeks</p>
-
           <div class="price">$1,000</div>
-
-          <a href="#contact" class="btn">Inquire About Hugo</a>
+          <a class="btn" href="mailto:royalcavapoopuppies4@gmail.com?subject=Inquiry%20About%20Hugo&body=Hello%20Royal%20Cavapoo%20Puppies%2C%0A%0AI%20am%20interested%20in%20Hugo.%0APuppy%3A%20Hugo%0APrice%3A%20%241%2C000%0AAge%3A%2010%20weeks%0A%0APlease%20send%20me%20more%20information%20about%20Hugo.%0A%0AThank%20you.">Inquire About Hugo</a>
         </div>
       </div>
-
-      <!-- BRUNO -->
 
       <div class="puppy-card">
         <img src="Bruno.jpg" alt="Bruno the Cavapoo puppy">
-
         <div class="puppy-info">
           <h3>Bruno</h3>
           <h4>The Playful Sweetheart</h4>
-
-          <p>
-            Bruno is an adorable little puppy with a lovable
-            personality and a playful spirit. His sweet face
-            and charming presence make him truly special.
-          </p>
-
-          <p><strong>Gender:</strong> Male</p>
+          <p>Bruno is an adorable little puppy with a lovable personality and playful spirit. His sweet face makes him truly special.</p>
           <p><strong>Age:</strong> 10 weeks</p>
-
           <div class="price">$1,000</div>
-
-          <a href="#contact" class="btn">Inquire About Bruno</a>
+          <a class="btn" href="mailto:royalcavapoopuppies4@gmail.com?subject=Inquiry%20About%20Bruno&body=Hello%20Royal%20Cavapoo%20Puppies%2C%0A%0AI%20am%20interested%20in%20Bruno.%0APuppy%3A%20Bruno%0APrice%3A%20%241%2C000%0AAge%3A%2010%20weeks%0A%0APlease%20send%20me%20more%20information%20about%20Bruno.%0A%0AThank%20you.">Inquire About Bruno</a>
         </div>
       </div>
-
-      <!-- BELLA -->
-
-      <div class="puppy-card">
-        <img src="Bella.jpg" alt="Bella the Cavapoo puppy">
-
-        <div class="puppy-info">
-          <h3>Bella</h3>
-          <h4>The Beautiful Little Princess</h4>
-
-          <p>
-            Bella is a lovely little puppy with a sweet face
-            and a delightful personality. Her gentle charm
-            makes her an adorable companion.
-          </p>
-
-          <p><strong>Gender:</strong> Please confirm</p>
-          <p><strong>Age:</strong> 10 weeks</p>
-
-          <div class="price">$1,000</div>
-
-          <a href="#contact" class="btn">Inquire About Bella</a>
-        </div>
-      </div>
-
-      <!-- LUNA -->
-
-      <div class="puppy-card">
-        <img src="Luna.jpg" alt="Luna the Cavapoo puppy">
-
-        <div class="puppy-info">
-          <h3>Luna</h3>
-          <h4>The Little Sunshine</h4>
-
-          <p>
-            Luna is a delightful, cheerful puppy who brings
-            warmth and happiness wherever she goes. Her playful
-            spirit and loving personality make her a wonderful
-            companion.
-          </p>
-
-          <p><strong>Gender:</strong> Please confirm</p>
-          <p><strong>Age:</strong> 10 weeks</p>
-
-          <div class="price">$1,000</div>
-
-          <a href="#contact" class="btn">Inquire About Luna</a>
-        </div>
-      </div>
-
-      <!-- SUZY -->
 
       <div class="puppy-card">
         <img src="Suzy.jpg" alt="Suzy the Cavapoo puppy">
-
         <div class="puppy-info">
           <h3>Suzy</h3>
           <h4>The Little Adventure Buddy</h4>
-
-          <p>
-            Suzy is a delightful puppy with a cheerful,
-            playful presence. Her adorable personality and
-            sweet expression make her a wonderful little
-            companion to get to know.
-          </p>
-
-          <p><strong>Gender:</strong> Please confirm</p>
+          <p>Suzy is a delightful puppy with a cheerful presence. Her adorable personality and sweet expression make her a wonderful companion.</p>
           <p><strong>Age:</strong> 10 weeks</p>
-
           <div class="price">$1,000</div>
-
-          <a href="#contact" class="btn">Inquire About Suzy</a>
+          <a class="btn" href="mailto:royalcavapoopuppies4@gmail.com?subject=Inquiry%20About%20Suzy&body=Hello%20Royal%20Cavapoo%20Puppies%2C%0A%0AI%20am%20interested%20in%20Suzy.%0APuppy%3A%20Suzy%0APrice%3A%20%241%2C000%0AAge%3A%2010%20weeks%0A%0APlease%20send%20me%20more%20information%20about%20Suzy.%0A%0AThank%20you.">Inquire About Suzy</a>
         </div>
       </div>
 
-      <!-- THEO -->
+      <div class="puppy-card">
+        <img src="Luna.jpg" alt="Luna the Cavapoo puppy">
+        <div class="puppy-info">
+          <h3>Luna</h3>
+          <h4>The Little Sunshine</h4>
+          <p>Luna is a delightful, cheerful puppy who brings warmth and happiness wherever she goes. Her playful spirit and loving personality make her a wonderful companion.</p>
+          <p><strong>Age:</strong> 10 weeks</p>
+          <div class="price">$1,000</div>
+          <a class="btn" href="mailto:royalcavapoopuppies4@gmail.com?subject=Inquiry%20About%20Luna&body=Hello%20Royal%20Cavapoo%20Puppies%2C%0A%0AI%20am%20interested%20in%20Luna.%0APuppy%3A%20Luna%0APrice%3A%20%241%2C000%0AAge%3A%2010%20weeks%0A%0APlease%20send%20me%20more%20information%20about%20Luna.%0A%0AThank%20you.">Inquire About Luna</a>
+        </div>
+      </div>
 
       <div class="puppy-card">
         <img src="Theo.jpg" alt="Theo the Cavapoo puppy">
-
         <div class="puppy-info">
           <h3>Theo</h3>
           <h4>The Curious Explorer</h4>
-
-          <p>
-            Theo is an adventurous little boy who loves
-            discovering new things. Intelligent, playful,
-            and affectionate, he is always ready for fun
-            and exciting adventures.
-          </p>
-
-          <p><strong>Gender:</strong> Male</p>
+          <p>Theo is an adventurous little boy who loves discovering new things. Intelligent, playful, and affectionate, he is always ready for fun and exciting adventures.</p>
           <p><strong>Age:</strong> 10 weeks</p>
-
           <div class="price">$1,000</div>
-
-          <a href="#contact" class="btn">Inquire About Theo</a>
+          <a class="btn" href="mailto:royalcavapoopuppies4@gmail.com?subject=Inquiry%20About%20Theo&body=Hello%20Royal%20Cavapoo%20Puppies%2C%0A%0AI%20am%20interested%20in%20Theo.%0APuppy%3A%20Theo%0APrice%3A%20%241%2C000%0AAge%3A%2010%20weeks%0A%0APlease%20send%20me%20more%20information%20about%20Theo.%0A%0AThank%20you.">Inquire About Theo</a>
         </div>
       </div>
 
-      <!-- LEO -->
-
       <div class="puppy-card">
         <img src="Leo.jpg" alt="Leo the Cavapoo puppy">
-
         <div class="puppy-info">
           <h3>Leo</h3>
           <h4>The Charming Little Star</h4>
-
-          <p>
-            Leo is a lovable, confident puppy with a heart
-            full of affection. His playful energy and sweet
-            nature make him a delightful addition to any
-            loving home.
-          </p>
-
-          <p><strong>Gender:</strong> Male</p>
+          <p>Leo is a lovable, confident puppy with a heart full of affection. His playful energy and sweet nature make him a delightful addition to any loving home.</p>
           <p><strong>Age:</strong> 10 weeks</p>
-
           <div class="price">$1,000</div>
-
-          <a href="#contact" class="btn">Inquire About Leo</a>
+          <a class="btn" href="mailto:royalcavapoopuppies4@gmail.com?subject=Inquiry%20About%20Leo&body=Hello%20Royal%20Cavapoo%20Puppies%2C%0A%0AI%20am%20interested%20in%20Leo.%0APuppy%3A%20Leo%0APrice%3A%20%241%2C000%0AAge%3A%2010%20weeks%0A%0APlease%20send%20me%20more%20information%20about%20Leo.%0A%0AThank%20you.">Inquire About Leo</a>
         </div>
       </div>
 
@@ -692,7 +548,12 @@ footer a {
     <div class="section-title">
       <h2>Meet the Parents</h2>
       <div class="gold-line"></div>
+      <p>
+        Our Loving Cavapoo Parents
+      </p>
+    </div>
 
+    <div class="about-box">
       <p>
         Our beautiful Cavapoo parents are cherished for their
         affectionate, gentle, and friendly personalities.
@@ -701,33 +562,33 @@ footer a {
       </p>
     </div>
 
-    <div class="parents-grid">
+    <div class="parents-grid" style="margin-top:30px;">
 
       <div class="parent-card">
         <img src="Parents1.jpg" alt="Cavapoo breeding parent">
-        <h3>Our Loving Cavapoo Parent</h3>
+        <h3>Our Loving Parent</h3>
       </div>
 
       <div class="parent-card">
         <img src="Parents2.jpg" alt="Cavapoo breeding parent">
-        <h3>Our Beautiful Cavapoo Parent</h3>
+        <h3>Our Beautiful Parent</h3>
       </div>
 
       <div class="parent-card">
         <img src="Parents3.jpg" alt="Cavapoo breeding parent">
-        <h3>Our Cherished Cavapoo Family</h3>
+        <h3>Our Cherished Parent</h3>
       </div>
 
       <div class="parent-card">
         <img src="Parents4.jpg" alt="Cavapoo breeding parent">
-        <h3>Our Wonderful Cavapoo Family</h3>
+        <h3>Our Wonderful Parent</h3>
       </div>
 
     </div>
   </div>
 </section>
 
-<!-- HOLIDAY RESERVATIONS -->
+<!-- CHRISTMAS AND NEW YEAR SMS RESERVATIONS -->
 
 <section class="holiday-section" id="holiday">
   <div class="container">
@@ -735,40 +596,41 @@ footer a {
     <div class="section-title">
       <h2>Christmas & New Year Litter Reservations</h2>
       <div class="gold-line"></div>
-
-      <p style="color:white;">
-        Looking forward to welcoming a new furry family member
-        during the holiday season?
+      <p>
+        Interested in welcoming a puppy during the holiday season?
+        Contact us to learn about our anticipated litter.
       </p>
     </div>
 
     <div class="holiday-box">
 
-      <h2>Holiday Puppy Reservations</h2>
+      <h2>Reserve Your Holiday Companion</h2>
 
       <p>
-        We are accepting inquiries for our anticipated
-        Christmas and New Year litter.
+        Contact us for information about the Christmas
+        and New Year litter, expected availability,
+        and reservation arrangements.
       </p>
 
       <p class="holiday-price">$400 Reservation Deposit</p>
-
       <p>Remaining balance: $600</p>
+      <p>Total puppy price: $1,000</p>
 
       <p>
-        Please contact us to confirm litter timing,
-        puppy availability, reservation terms, and
-        the applicable refund policy before making
-        any payment.
+        Please request and review the written reservation
+        agreement and refund terms before making a payment.
       </p>
 
-      <a href="#contact" class="btn">Ask About Holiday Reservations</a>
+      <a class="btn"
+      href="sms:+19375185268?body=Hello%20Royal%20Cavapoo%20Puppies%2C%20I%20am%20interested%20in%20your%20Christmas%20and%20New%20Year%20litter.%20Please%20send%20me%20information%20about%20availability%2C%20reservation%20terms%2C%20and%20the%20%24400%20deposit.">
+      Text Us About Holiday Reservations
+      </a>
 
     </div>
   </div>
 </section>
 
-<!-- ABOUT US -->
+<!-- ABOUT -->
 
 <section id="about">
   <div class="container">
@@ -781,26 +643,22 @@ footer a {
     <div class="about-box">
 
       <p>
-        Welcome to Royal Cavapoo Puppies, a place dedicated
-        to celebrating the wonderful companionship that
-        Cavapoos bring into our lives.
+        Welcome to Royal Cavapoo Puppies, where we celebrate
+        the joy and companionship that Cavapoos can bring
+        into loving homes.
       </p>
 
       <p>
-        We believe every puppy deserves kindness, attention,
-        responsible care, and a loving forever home.
-        Our goal is to help prospective families learn
-        about our puppies and make thoughtful decisions
-        when welcoming a new companion.
+        Our goal is to help families learn about our puppies,
+        explore their personalities, and make informed
+        decisions when welcoming a new companion.
       </p>
 
       <p>
-        We invite you to explore our puppy profiles,
-        learn about our Cavapoo family, and contact us
-        with any questions.
+        We encourage prospective families to ask questions,
+        learn about puppy care, and discuss health records
+        and arrangements before making a reservation.
       </p>
-
-      <a href="#contact" class="btn">Get in Touch</a>
 
     </div>
   </div>
@@ -812,132 +670,77 @@ footer a {
   <div class="container">
 
     <div class="section-title">
-      <h2>Happy Families</h2>
+      <h2>Family Testimonials</h2>
       <div class="gold-line"></div>
-
-      <p>
-        Read experiences shared by families who have
-        welcomed a Cavapoo into their homes.
-      </p>
     </div>
 
     <div class="review-grid">
 
       <div class="review">
         <div class="stars">★★★★★</div>
-        <p>
-          “Our experience with Royal Cavapoo Puppies was
-          wonderful from beginning to end. Our little
-          Cavapoo has brought so much happiness into our home!”
-        </p>
-        <h4>Emily Anderson</h4>
-        <small>Texas</small>
+        <p>“Our experience with Royal Cavapoo Puppies was wonderful from beginning to end. Our little Cavapoo has brought so much happiness into our home!”</p>
+        <h4>Emily Anderson</h4><small>Texas</small>
       </div>
 
       <div class="review">
         <div class="stars">★★★★★</div>
-        <p>
-          “Our puppy is adorable, affectionate, and has
-          quickly become our favorite family companion.
-          We couldn't be happier!”
-        </p>
-        <h4>Jessica Mitchell</h4>
-        <small>Florida</small>
+        <p>“Our puppy is adorable, affectionate, and has quickly become our favorite family companion. We couldn't be happier!”</p>
+        <h4>Jessica Mitchell</h4><small>Florida</small>
       </div>
 
       <div class="review">
         <div class="stars">★★★★★</div>
-        <p>
-          “The communication was excellent, and all our
-          questions were answered. We truly appreciated
-          the friendly experience.”
-        </p>
-        <h4>Michael Thompson</h4>
-        <small>California</small>
+        <p>“The communication was excellent, and all our questions were answered. We truly appreciated the friendly experience.”</p>
+        <h4>Michael Thompson</h4><small>California</small>
       </div>
 
       <div class="review">
         <div class="stars">★★★★★</div>
-        <p>
-          “Our Cavapoo has brought endless smiles and
-          laughter into our household. We absolutely
-          adore our new puppy!”
-        </p>
-        <h4>Sarah Williams</h4>
-        <small>Georgia</small>
+        <p>“Our Cavapoo has brought endless smiles and laughter into our household. We absolutely adore our new puppy!”</p>
+        <h4>Sarah Williams</h4><small>Georgia</small>
       </div>
 
       <div class="review">
         <div class="stars">★★★★★</div>
-        <p>
-          “Royal Cavapoo Puppies made finding our new
-          puppy enjoyable. Our little companion is
-          everything we hoped for!”
-        </p>
-        <h4>Amanda Robinson</h4>
-        <small>Ohio</small>
+        <p>“Royal Cavapoo Puppies made finding our new puppy enjoyable. Our little companion is everything we hoped for!”</p>
+        <h4>Amanda Robinson</h4><small>Ohio</small>
       </div>
 
       <div class="review">
         <div class="stars">★★★★★</div>
-        <p>
-          “Our puppy is the sweetest addition to our home.
-          We love her playful personality and
-          affectionate nature.”
-        </p>
-        <h4>Daniel Harris</h4>
-        <small>North Carolina</small>
+        <p>“Our puppy is the sweetest addition to our home. We love her playful personality and affectionate nature.”</p>
+        <h4>Daniel Harris</h4><small>North Carolina</small>
       </div>
 
       <div class="review">
         <div class="stars">★★★★★</div>
-        <p>
-          “Bringing our Cavapoo home has been one of
-          the happiest moments for our family.
-          We are so grateful!”
-        </p>
-        <h4>Olivia Bennett</h4>
-        <small>Arizona</small>
+        <p>“Bringing our Cavapoo home has been one of the happiest moments for our family. We are so grateful!”</p>
+        <h4>Olivia Bennett</h4><small>Arizona</small>
       </div>
 
       <div class="review">
         <div class="stars">★★★★★</div>
-        <p>
-          “Our children absolutely adore their new
-          Cavapoo puppy! She has brought so much joy
-          and excitement into our home.”
-        </p>
-        <h4>Matthew Carter</h4>
-        <small>Tennessee</small>
+        <p>“Our children absolutely adore their new Cavapoo puppy! She has brought so much joy and excitement into our home.”</p>
+        <h4>Matthew Carter</h4><small>Tennessee</small>
       </div>
 
       <div class="review">
         <div class="stars">★★★★★</div>
-        <p>
-          “Our Cavapoo is adorable, loving, and full
-          of personality. We couldn't imagine our
-          home without him!”
-        </p>
-        <h4>Lauren Parker</h4>
-        <small>New York</small>
+        <p>“Our Cavapoo is adorable, loving, and full of personality. We couldn't imagine our home without him!”</p>
+        <h4>Lauren Parker</h4><small>New York</small>
       </div>
 
       <div class="review">
         <div class="stars">★★★★★</div>
-        <p>
-          “We are so happy with our new Cavapoo!
-          Our little puppy has quickly stolen
-          everyone's heart.”
-        </p>
-        <h4>Christopher Cooper</h4>
-        <small>Washington</small>
+        <p>“We are so happy with our new Cavapoo! Our little puppy has quickly stolen everyone's heart.”</p>
+        <h4>Christopher Cooper</h4><small>Washington</small>
       </div>
 
     </div>
   </div>
 </section>
 
-<!-- CONTACT AND INQUIRIES -->
+<!-- CONTACT -->
 
 <section class="contact-section" id="contact">
   <div class="container">
@@ -945,99 +748,39 @@ footer a {
     <div class="section-title">
       <h2>Contact Royal Cavapoo Puppies</h2>
       <div class="gold-line"></div>
-
       <p>
-        Interested in one of our puppies or want to
-        learn more about our upcoming litter?
-        We would love to hear from you.
+        Interested in one of our puppies?
+        Send us an email or call/text us.
       </p>
     </div>
 
     <div class="contact-box">
 
-      <p><strong>Email:</strong>
+      <p><strong>Email:</strong><br>
         <a href="mailto:royalcavapoopuppies4@gmail.com">
           royalcavapoopuppies4@gmail.com
         </a>
       </p>
 
-      <p><strong>Phone:</strong>
+      <p><strong>Phone:</strong><br>
         <a href="tel:+19375185268">
           +1 (937) 518-5268
         </a>
       </p>
 
-      <p>
-        You can call, text, or email us with your
-        questions and puppy inquiries.
-      </p>
+      <a class="btn"
+      href="mailto:royalcavapoopuppies4@gmail.com?subject=Royal%20Cavapoo%20Puppies%20Inquiry">
+      Email Us
+      </a>
 
-      <form class="contact-form"
-      action="mailto:royalcavapoopuppies4@gmail.com"
-      method="post"
-      enctype="text/plain">
-
-        <label for="name">Your Name</label>
-        <input
-          type="text"
-          id="name"
-          name="Name"
-          placeholder="Enter your full name"
-          required>
-
-        <label for="email">Your Email</label>
-        <input
-          type="email"
-          id="email"
-          name="Email"
-          placeholder="Enter your email address"
-          required>
-
-        <label for="phone">Your Phone Number</label>
-        <input
-          type="tel"
-          id="phone"
-          name="Phone"
-          placeholder="Enter your phone number">
-
-        <label for="puppy">Which puppy are you interested in?</label>
-
-        <select id="puppy" name="Puppy">
-          <option value="General Inquiry">General Inquiry</option>
-          <option value="Molly">Molly</option>
-          <option value="Hugo">Hugo</option>
-          <option value="Bruno">Bruno</option>
-          <option value="Bella">Bella</option>
-          <option value="Luna">Luna</option>
-          <option value="Suzy">Suzy</option>
-          <option value="Theo">Theo</option>
-          <option value="Leo">Leo</option>
-          <option value="Christmas/New Year Litter">Christmas/New Year Litter</option>
-        </select>
-
-        <label for="message">Your Message</label>
-        <textarea
-          id="message"
-          name="Message"
-          placeholder="Tell us what you would like to know..."
-          required></textarea>
-
-        <button type="submit" class="btn">
-          Send Puppy Inquiry
-        </button>
-
-      </form>
-
-      <p style="font-size:12px;color:#777;margin-top:15px;">
-        Your inquiry will open your email application.
-        Please send the message from there.
-      </p>
+      <a class="btn"
+      href="sms:+19375185268?body=Hello%20Royal%20Cavapoo%20Puppies%2C%20I%20would%20like%20more%20information.">
+      Text Us
+      </a>
 
     </div>
   </div>
 </section>
-
-<!-- FOOTER -->
 
 <footer>
 
@@ -1059,9 +802,7 @@ footer a {
     </a>
   </p>
 
-  <p>
-    © 2026 Royal Cavapoo Puppies. All rights reserved.
-  </p>
+  <p>© 2026 Royal Cavapoo Puppies. All rights reserved.</p>
 
 </footer>
 
