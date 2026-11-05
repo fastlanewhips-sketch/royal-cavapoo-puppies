@@ -1,11 +1,11 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Meet our adorable Cavapoo puppies at Royal Cavapoo Puppies. Learn about our puppies, parents, and reservation inquiries.">
-<title>Royal Cavapoo Puppies | Find Your Companion</title>
+<meta name="description" content="Explore Royal Cavapoo Puppies, meet our Cavapoo puppies and parents, and send puppy or Christmas and New Year litter reservation inquiries.">
+<meta name="theme-color" content="#10243a">
+<title>Royal Cavapoo Puppies | Puppies & Holiday Reservations</title>
 
 <style>
 :root {
@@ -133,6 +133,15 @@ header {
   transform: translateY(-2px);
 }
 
+.btn:focus-visible,
+.nav-links a:focus-visible,
+form input:focus-visible,
+form select:focus-visible,
+form textarea:focus-visible {
+  outline: 3px solid #e0bd78;
+  outline-offset: 3px;
+}
+
 .btn-dark {
   background: var(--navy);
   color: white;
@@ -258,8 +267,70 @@ section {
   margin: 10px auto;
 }
 
-.holiday .btn {
-  margin-top: 20px;
+.holiday-intro {
+  max-width: 780px;
+  margin: 15px auto 25px;
+  font-size: 17px;
+}
+
+.holiday-details {
+  max-width: 650px;
+  margin: 25px auto;
+  padding: 25px;
+  border: 1px solid var(--gold);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.holiday-details h3 {
+  color: var(--gold);
+  font-family: Georgia, serif;
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+.holiday-details p {
+  margin: 8px 0;
+}
+
+.holiday-note {
+  margin-top: 18px !important;
+}
+
+.holiday-form-wrapper {
+  max-width: 700px;
+  margin: 35px auto;
+  padding: 30px;
+  background: white;
+  color: var(--text);
+  border-radius: 12px;
+  border: 2px solid var(--gold);
+  text-align: left;
+}
+
+.holiday-form-wrapper h3 {
+  font-family: Georgia, serif;
+  color: var(--navy);
+  font-size: 27px;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.holiday-form-wrapper > p {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.holiday-form {
+  background: var(--cream);
+}
+
+.holiday-contact {
+  margin-top: 25px;
+}
+
+.holiday-contact p {
+  margin-bottom: 12px;
 }
 
 .testimonial-grid {
@@ -391,6 +462,12 @@ footer p {
   .hero img {
     height: 300px;
   }
+
+  .btn {
+    max-width: 100%;
+    text-align: center;
+    white-space: normal;
+  }
 }
 
 @media (max-width: 560px) {
@@ -428,6 +505,18 @@ footer p {
   .puppy-card img {
     height: 280px;
   }
+
+  .holiday-form-wrapper {
+    padding: 18px;
+  }
+
+  .holiday-details {
+    padding: 18px;
+  }
+
+  .holiday h2 {
+    font-size: 28px;
+  }
 }
 </style>
 </head>
@@ -442,6 +531,7 @@ footer p {
       <a href="#home">Home</a>
       <a href="#puppies">Our Puppies</a>
       <a href="#parents">Parents</a>
+      <a href="#holiday">Holiday Reservations</a>
       <a href="#testimonials">Testimonials</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -462,7 +552,7 @@ footer p {
     </div>
 
     <div>
-      <img src="Homepage.jpg" alt="Royal Cavapoo Puppies homepage">
+      <img src="Homepage.jpg" alt="Royal Cavapoo Puppies homepage" fetchpriority="high">
     </div>
   </div>
 </section>
@@ -487,9 +577,7 @@ footer p {
           <p>A sweet and affectionate little companion with a lovely personality.</p>
           <p><strong>Age:</strong> 10 weeks</p>
           <p class="price">$1,000</p>
-          <button class="btn puppy-inquiry" type="button" data-puppy="Bella">
-            Inquire About Bella
-          </button>
+          <button class="btn puppy-inquiry" type="button" data-puppy="Bella">Inquire About Bella</button>
         </div>
       </div>
 
@@ -500,9 +588,7 @@ footer p {
           <p>A delightful puppy with a gentle nature and a playful spirit.</p>
           <p><strong>Age:</strong> 10 weeks</p>
           <p class="price">$1,000</p>
-          <button class="btn puppy-inquiry" type="button" data-puppy="Molly">
-            Inquire About Molly
-          </button>
+          <button class="btn puppy-inquiry" type="button" data-puppy="Molly">Inquire About Molly</button>
         </div>
       </div>
 
@@ -513,9 +599,7 @@ footer p {
           <p>A charming little puppy ready to bring happiness and companionship.</p>
           <p><strong>Age:</strong> 10 weeks</p>
           <p class="price">$1,000</p>
-          <button class="btn puppy-inquiry" type="button" data-puppy="Hugo">
-            Inquire About Hugo
-          </button>
+          <button class="btn puppy-inquiry" type="button" data-puppy="Hugo">Inquire About Hugo</button>
         </div>
       </div>
 
@@ -526,9 +610,7 @@ footer p {
           <p>A lovable puppy with a fun-loving personality and a sweet expression.</p>
           <p><strong>Age:</strong> 10 weeks</p>
           <p class="price">$1,000</p>
-          <button class="btn puppy-inquiry" type="button" data-puppy="Bruno">
-            Inquire About Bruno
-          </button>
+          <button class="btn puppy-inquiry" type="button" data-puppy="Bruno">Inquire About Bruno</button>
         </div>
       </div>
 
@@ -539,9 +621,7 @@ footer p {
           <p>A precious little puppy with a cheerful personality and lots of charm.</p>
           <p><strong>Age:</strong> 10 weeks</p>
           <p class="price">$1,000</p>
-          <button class="btn puppy-inquiry" type="button" data-puppy="Suzy">
-            Inquire About Suzy
-          </button>
+          <button class="btn puppy-inquiry" type="button" data-puppy="Suzy">Inquire About Suzy</button>
         </div>
       </div>
 
@@ -556,9 +636,7 @@ footer p {
           </p>
           <p><strong>Age:</strong> 10 weeks</p>
           <p class="price">$1,000</p>
-          <button class="btn puppy-inquiry" type="button" data-puppy="Luna">
-            Inquire About Luna
-          </button>
+          <button class="btn puppy-inquiry" type="button" data-puppy="Luna">Inquire About Luna</button>
         </div>
       </div>
 
@@ -573,9 +651,7 @@ footer p {
           </p>
           <p><strong>Age:</strong> 10 weeks</p>
           <p class="price">$1,000</p>
-          <button class="btn puppy-inquiry" type="button" data-puppy="Theo">
-            Inquire About Theo
-          </button>
+          <button class="btn puppy-inquiry" type="button" data-puppy="Theo">Inquire About Theo</button>
         </div>
       </div>
 
@@ -590,9 +666,7 @@ footer p {
           </p>
           <p><strong>Age:</strong> 10 weeks</p>
           <p class="price">$1,000</p>
-          <button class="btn puppy-inquiry" type="button" data-puppy="Leo">
-            Inquire About Leo
-          </button>
+          <button class="btn puppy-inquiry" type="button" data-puppy="Leo">Inquire About Leo</button>
         </div>
       </div>
 
@@ -644,25 +718,95 @@ footer p {
   </div>
 </section>
 
-<!-- HOLIDAY LITTER -->
-<section class="holiday">
+<!-- CHRISTMAS & NEW YEAR HOLIDAY RESERVATIONS -->
+<section class="holiday" id="holiday">
   <div class="container">
-    <h2>Christmas & New Year Litter</h2>
+    <h2>🎄 Christmas & New Year Litter Reservations</h2>
 
-    <p>
-      Looking forward to welcoming a Cavapoo puppy during the holiday
-      season? Contact us to ask about our Christmas and New Year litter,
-      availability, and reservation details.
+    <p class="holiday-intro">
+      Make the holiday season extra special with a loving Cavapoo companion.
+      Royal Cavapoo Puppies welcomes inquiries from families interested in
+      our Christmas and New Year litter.
     </p>
 
-    <p><strong>Reservation deposit:</strong> $400</p>
-    <p><strong>Remaining balance:</strong> $600</p>
-    <p><strong>Total puppy price:</strong> $1,000</p>
+    <div class="holiday-details">
+      <h3>Holiday Litter Reservation Details</h3>
+      <p><strong>Total Puppy Price:</strong> $1,000</p>
+      <p><strong>Reservation Deposit:</strong> $400</p>
+      <p><strong>Remaining Balance:</strong> $600</p>
+      <p class="holiday-note">
+        Contact us to discuss litter availability, expected timing,
+        reservation requirements, and next steps.
+      </p>
+    </div>
 
-    <a class="btn"
-       href="sms:+19375185268?body=Hello%20Royal%20Cavapoo%20Puppies%2C%20I%20am%20interested%20in%20your%20Christmas%20and%20New%20Year%20litter.%20Please%20send%20me%20information%20about%20availability%20and%20reservation%20terms.">
-      Text Us About Holiday Reservations
-    </a>
+    <div class="holiday-form-wrapper">
+      <h3>Holiday Litter Inquiry Form</h3>
+      <p>
+        Complete the form below to tell us which holiday litter you are
+        interested in. We will use your information to respond to your inquiry.
+      </p>
+
+      <form class="holiday-form"
+            action="https://formspree.io/f/xvkklwvl"
+            method="POST">
+
+        <label for="holiday-name">Full Name</label>
+        <input type="text" id="holiday-name" name="Customer Name"
+               placeholder="Enter your full name" autocomplete="name" required>
+
+        <label for="holiday-email">Email Address</label>
+        <input type="email" id="holiday-email" name="Email"
+               placeholder="Enter your email address" autocomplete="email" required>
+
+        <label for="holiday-phone">Phone Number</label>
+        <input type="tel" id="holiday-phone" name="Phone Number"
+               placeholder="Enter your phone number" autocomplete="tel" required>
+
+        <label for="holiday-choice">Preferred Holiday Litter</label>
+        <select id="holiday-choice" name="Holiday Litter Preference" required>
+          <option value="">Select your preference</option>
+          <option value="Christmas Litter">Christmas Litter</option>
+          <option value="New Year Litter">New Year Litter</option>
+          <option value="Either Holiday Litter">Either Christmas or New Year</option>
+        </select>
+
+        <label for="holiday-timing">Preferred Puppy Arrival Timing</label>
+        <select id="holiday-timing" name="Preferred Timing" required>
+          <option value="">Select preferred timing</option>
+          <option value="Before Christmas">Before Christmas</option>
+          <option value="Around Christmas">Around Christmas</option>
+          <option value="Before New Year">Before New Year</option>
+          <option value="Around New Year">Around New Year</option>
+          <option value="Flexible Timing">Flexible timing</option>
+        </select>
+
+        <label for="holiday-message">Your Message</label>
+        <textarea id="holiday-message" name="Message"
+                  placeholder="Tell us about your holiday puppy inquiry or any questions..."
+                  required></textarea>
+
+        <input type="hidden" name="_subject"
+               value="Christmas and New Year Litter Reservation Inquiry">
+
+        <button class="btn" type="submit">Submit Holiday Litter Inquiry</button>
+
+        <p class="form-note">
+          Submitting this form sends an inquiry only and does not confirm
+          a reservation. Availability and reservation terms must be discussed
+          and agreed upon separately. Please do not submit payment information
+          through this form.
+        </p>
+      </form>
+    </div>
+
+    <div class="holiday-contact">
+      <p>Prefer to contact us directly?</p>
+      <a class="btn"
+         href="sms:+19375185268?body=Hello%20Royal%20Cavapoo%20Puppies%2C%20I%20am%20interested%20in%20the%20Christmas%20and%20New%20Year%20litter.">
+        Text Us About Holiday Reservations
+      </a>
+    </div>
   </div>
 </section>
 
@@ -768,30 +912,16 @@ footer p {
       <h3>Puppy Inquiry Form</h3>
 
       <label for="customer-name">Your Full Name</label>
-      <input
-        type="text"
-        id="customer-name"
-        name="Customer Name"
-        placeholder="Enter your full name"
-        autocomplete="name"
-        required>
+      <input type="text" id="customer-name" name="Customer Name"
+             placeholder="Enter your full name" autocomplete="name" required>
 
       <label for="customer-email">Your Email Address</label>
-      <input
-        type="email"
-        id="customer-email"
-        name="Email"
-        placeholder="Enter your email address"
-        autocomplete="email"
-        required>
+      <input type="email" id="customer-email" name="Email"
+             placeholder="Enter your email address" autocomplete="email" required>
 
       <label for="customer-phone">Phone Number (Optional)</label>
-      <input
-        type="tel"
-        id="customer-phone"
-        name="Phone Number"
-        placeholder="Enter your phone number"
-        autocomplete="tel">
+      <input type="tel" id="customer-phone" name="Phone Number"
+             placeholder="Enter your phone number" autocomplete="tel">
 
       <label for="puppy-choice">Which Puppy Are You Interested In?</label>
       <select id="puppy-choice" name="Puppy Interested In" required>
@@ -809,23 +939,17 @@ footer p {
       </select>
 
       <label for="customer-message">Your Message</label>
-      <textarea
-        id="customer-message"
-        name="Message"
-        placeholder="Write your questions or inquiry here..."
-        required></textarea>
+      <textarea id="customer-message" name="Message"
+                placeholder="Write your questions or inquiry here..."
+                required></textarea>
 
-      <input
-        type="hidden"
-        name="_subject"
-        value="New Royal Cavapoo Puppies Website Inquiry">
+      <input type="hidden" name="_subject"
+             value="New Royal Cavapoo Puppies Website Inquiry">
 
-      <button class="btn" type="submit">
-        Send Puppy Inquiry
-      </button>
+      <button class="btn" type="submit">Send Puppy Inquiry</button>
 
       <p class="form-note">
-        Your inquiry will be sent securely through Formspree.
+        Your inquiry will be sent through Formspree.
         Please do not include payment details or sensitive personal information.
       </p>
     </form>
