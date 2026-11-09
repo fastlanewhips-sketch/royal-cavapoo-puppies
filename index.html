@@ -1,579 +1,441 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Royal Cavapoo Puppies</title>
-
-<meta name="description" content="Meet the adorable Cavapoo puppies at Royal Cavapoo Puppies. Explore puppy details and send us an inquiry.">
-
-<style>
-:root {
-  --navy: #10243a;
-  --blue: #294967;
-  --gold: #c6a15b;
-  --cream: #faf7f0;
-  --white: #ffffff;
-  --text: #273444;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background: var(--cream);
-  color: var(--text);
-  line-height: 1.7;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
-a {
-  text-decoration: none;
-}
-
-.container {
-  width: 92%;
-  max-width: 1150px;
-  margin: auto;
-}
-
-header {
-  background: var(--navy);
-  color: white;
-  padding: 17px 0;
-  border-bottom: 3px solid var(--gold);
-}
-
-.nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-.logo {
-  font-family: Georgia, serif;
-  font-size: 25px;
-  font-weight: bold;
-  color: var(--gold);
-}
-
-.nav-links {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.nav-links a {
-  color: white;
-  font-size: 14px;
-}
-
-.hero {
-  background: linear-gradient(120deg, var(--navy), var(--blue));
-  color: white;
-  padding: 65px 0;
-}
-
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 35px;
-}
-
-.hero h1 {
-  font-family: Georgia, serif;
-  font-size: 45px;
-  line-height: 1.2;
-  color: var(--gold);
-  margin-bottom: 20px;
-}
-
-.hero p {
-  margin-bottom: 25px;
-  font-size: 17px;
-}
-
-.hero img {
-  width: 100%;
-  height: 390px;
-  object-fit: cover;
-  border-radius: 15px;
-  border: 3px solid var(--gold);
-}
-
-.btn {
-  display: inline-block;
-  background: var(--gold);
-  color: var(--navy);
-  padding: 12px 22px;
-  border-radius: 6px;
-  font-weight: bold;
-  border: none;
-  cursor: pointer;
-  font-size: 15px;
-  transition: 0.2s;
-}
-
-.btn:hover {
-  background: #e0bd78;
-  transform: translateY(-2px);
-}
-
-.btn-dark {
-  background: var(--navy);
-  color: white;
-}
-
-section {
-  padding: 60px 0;
-}
-
-.section-title {
-  text-align: center;
-  margin-bottom: 35px;
-}
-
-.section-title h2 {
-  font-family: Georgia, serif;
-  color: var(--navy);
-  font-size: 34px;
-  margin-bottom: 10px;
-}
-
-.section-title p {
-  max-width: 700px;
-  margin: auto;
-}
-
-.puppy-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
-}
-
-.puppy-card {
-  background: white;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 5px 20px rgba(16, 36, 58, 0.09);
-  border: 1px solid #eee5d4;
-}
-
-.puppy-card img {
-  width: 100%;
-  height: 270px;
-  object-fit: cover;
-}
-
-.puppy-info {
-  padding: 22px;
-}
-
-.puppy-info h3 {
-  color: var(--navy);
-  font-family: Georgia, serif;
-  font-size: 24px;
-  margin-bottom: 8px;
-}
-
-.price {
-  color: #9b762f;
-  font-weight: bold;
-  font-size: 19px;
-  margin: 10px 0;
-}
-
-.puppy-info .btn {
-  margin-top: 15px;
-  width: 100%;
-  text-align: center;
-}
-
-.about {
-  background: white;
-}
-
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 35px;
-  align-items: center;
-}
-
-.about-grid img {
-  height: 350px;
-  width: 100%;
-  object-fit: cover;
-  border-radius: 12px;
-}
-
-.about h2 {
-  font-family: Georgia, serif;
-  color: var(--navy);
-  font-size: 32px;
-  margin-bottom: 18px;
-}
-
-.parent-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 18px;
-}
-
-.parent-grid img {
-  height: 250px;
-  width: 100%;
-  object-fit: cover;
-  border-radius: 10px;
-  border: 2px solid var(--gold);
-}
-
-.holiday {
-  background: var(--navy);
-  color: white;
-  text-align: center;
-}
-
-.holiday h2 {
-  color: var(--gold);
-  font-family: Georgia, serif;
-  font-size: 34px;
-  margin-bottom: 15px;
-}
-
-.holiday-intro {
-  max-width: 780px;
-  margin: 15px auto 25px;
-  font-size: 17px;
-}
-
-.holiday-details {
-  max-width: 650px;
-  margin: 25px auto;
-  padding: 25px;
-  border: 1px solid var(--gold);
-  border-radius: 12px;
-  background: rgba(255,255,255,0.08);
-}
-
-.holiday-details h3 {
-  color: var(--gold);
-  font-family: Georgia, serif;
-  font-size: 25px;
-  margin-bottom: 15px;
-}
-
-.holiday-details p {
-  margin: 8px 0;
-}
-
-.holiday-form-wrapper {
-  max-width: 700px;
-  margin: 35px auto;
-  padding: 30px;
-  background: white;
-  color: var(--text);
-  border-radius: 12px;
-  border: 2px solid var(--gold);
-  text-align: left;
-}
-
-.holiday-form-wrapper h3 {
-  font-family: Georgia, serif;
-  color: var(--navy);
-  font-size: 27px;
-  text-align: center;
-  margin-bottom: 12px;
-}
-
-.testimonial-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-}
-
-.testimonial {
-  background: white;
-  border-radius: 10px;
-  padding: 24px;
-  border-left: 4px solid var(--gold);
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-}
-
-.testimonial h4 {
-  color: var(--navy);
-  margin-top: 12px;
-}
-
-.contact {
-  background: white;
-}
-
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 35px;
-  align-items: start;
-}
-
-.contact h2 {
-  font-family: Georgia, serif;
-  color: var(--navy);
-  font-size: 32px;
-  margin-bottom: 15px;
-}
-
-.contact-details p {
-  margin: 12px 0;
-  overflow-wrap: anywhere;
-}
-
-.contact-details a {
-  color: #173e61;
-  font-weight: bold;
-}
-
-form {
-  background: var(--cream);
-  padding: 25px;
-  border-radius: 12px;
-  border: 1px solid #e5d8c1;
-}
-
-form h3 {
-  color: var(--navy);
-  font-family: Georgia, serif;
-  font-size: 25px;
-  margin-bottom: 15px;
-}
-
-form label {
-  display: block;
-  margin: 12px 0 5px;
-  font-weight: bold;
-  color: var(--navy);
-}
-
-form input,
-form select,
-form textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #cbd2d8;
-  border-radius: 6px;
-  font-size: 16px;
-  background: white;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-form textarea {
-  min-height: 130px;
-  resize: vertical;
-}
-
-form button {
-  margin-top: 18px;
-  width: 100%;
-}
-
-.form-note {
-  font-size: 13px;
-  color: #596575;
-  margin-top: 12px;
-}
-
-.puppy-detail-preview {
-  display: none;
-  margin: 18px 0;
-  padding: 18px;
-  border: 1px solid var(--gold);
-  border-radius: 10px;
-  background: white;
-}
-
-.puppy-detail-preview.active {
-  display: grid;
-  grid-template-columns: 130px 1fr;
-  gap: 16px;
-  align-items: center;
-}
-
-.puppy-detail-preview img {
-  width: 130px;
-  height: 130px;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-.puppy-detail-preview h4 {
-  color: var(--navy);
-  font-family: Georgia, serif;
-  font-size: 22px;
-  margin-bottom: 6px;
-}
-
-.puppy-detail-preview p {
-  margin: 4px 0;
-}
-
-footer {
-  background: var(--navy);
-  color: white;
-  text-align: center;
-  padding: 25px 15px;
-}
-
-footer p {
-  margin: 5px 0;
-}
-
-@media (max-width: 850px) {
-  .hero-grid,
-  .about-grid,
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .puppy-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .parent-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .hero h1 {
-    font-size: 36px;
-  }
-
-  .hero img {
-    height: 300px;
-  }
-}
-
-@media (max-width: 560px) {
-  .nav {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .nav-links {
-    justify-content: center;
-    gap: 14px;
-  }
-
-  .puppy-grid,
-  .testimonial-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .hero {
-    padding: 40px 0;
-  }
-
-  .hero h1 {
-    font-size: 32px;
-  }
-
-  section {
-    padding: 45px 0;
-  }
-
-  .section-title h2 {
-    font-size: 28px;
-  }
-
-  .puppy-card img {
-    height: 280px;
-  }
-
-  .holiday-form-wrapper {
-    padding: 18px;
-  }
-
-  .holiday-details {
-    padding: 18px;
-  }
-
-  .holiday h2 {
-    font-size: 28px;
-  }
-
-  .puppy-detail-preview.active {
-    grid-template-columns: 1fr;
-  }
-
-  .puppy-detail-preview img {
-    width: 100%;
-    height: 220px;
-  }
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Royal Cavapoo Puppies | Loving Cavapoo Companions</title>
+
+  <meta name="description" content="Meet Royal Cavapoo Puppies. Explore our puppies, learn about our upcoming litter, and contact us by phone, text, or email.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      background: #fffaf6;
+      color: #352b26;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: 92%;
+      max-width: 1150px;
+      margin: auto;
+    }
+
+    header {
+      background: #563d32;
+      color: white;
+      padding: 16px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    nav {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #f4c9a8;
+    }
+
+    .hero {
+      min-height: 520px;
+      background:
+        linear-gradient(rgba(35, 25, 20, 0.48), rgba(35, 25, 20, 0.48)),
+        url("Homepage.jpg") center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      color: white;
+      padding: 70px 20px;
+    }
+
+    .hero-content {
+      max-width: 750px;
+      margin: auto;
+    }
+
+    .hero h1 {
+      font-size: clamp(34px, 6vw, 58px);
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 25px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 24px;
+      background: #b87950;
+      color: white;
+      border-radius: 6px;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      margin: 5px;
+    }
+
+    .btn:hover {
+      background: #925c3c;
+    }
+
+    .btn-light {
+      background: white;
+      color: #563d32;
+    }
+
+    section {
+      padding: 65px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .section-title h2 {
+      font-size: 32px;
+      color: #563d32;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      max-width: 700px;
+      margin: auto;
+      color: #6d5b50;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 35px;
+      align-items: center;
+    }
+
+    .about-grid img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    .puppy-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .puppy-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+    }
+
+    .puppy-card img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+    }
+
+    .puppy-info {
+      padding: 20px;
+    }
+
+    .puppy-info h3 {
+      font-size: 23px;
+      color: #563d32;
+      margin-bottom: 8px;
+    }
+
+    .puppy-info p {
+      margin-bottom: 6px;
+    }
+
+    .price {
+      color: #a45f36;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .highlight {
+      background: #f5e8dc;
+    }
+
+    .parents-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .parents-grid img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .reservation-box {
+      max-width: 800px;
+      margin: auto;
+      padding: 30px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .reservation-box h3 {
+      color: #563d32;
+      margin-bottom: 15px;
+      font-size: 25px;
+    }
+
+    .reservation-box ul {
+      padding-left: 22px;
+      margin: 15px 0;
+    }
+
+    .notice {
+      background: #fff2e6;
+      border-left: 4px solid #b87950;
+      padding: 15px;
+      margin: 20px 0;
+      border-radius: 5px;
+    }
+
+    .form-container {
+      max-width: 750px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    form label {
+      display: block;
+      margin: 15px 0 6px;
+      font-weight: bold;
+    }
+
+    form input,
+    form select,
+    form textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #d6c7bd;
+      border-radius: 6px;
+      font-size: 16px;
+      background: white;
+    }
+
+    form textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    form button {
+      width: 100%;
+      margin-top: 20px;
+      font-size: 16px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      text-align: center;
+    }
+
+    .contact-card {
+      padding: 25px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    }
+
+    .contact-card h3 {
+      color: #563d32;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      background: #563d32;
+      color: white;
+      padding: 30px 15px;
+      text-align: center;
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+
+    @media (max-width: 800px) {
+      .puppy-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      nav {
+        justify-content: center;
+      }
+
+      .header-content {
+        justify-content: center;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 550px) {
+      .puppy-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .parents-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: 430px;
+      }
+
+      .form-container,
+      .reservation-box {
+        padding: 20px;
+      }
+
+      .section-title h2 {
+        font-size: 27px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
 <header>
-  <div class="container nav">
+  <div class="container header-content">
     <div class="logo">Royal Cavapoo Puppies</div>
 
-    <nav class="nav-links">
+    <nav>
       <a href="#home">Home</a>
+      <a href="#about">About Us</a>
       <a href="#puppies">Our Puppies</a>
       <a href="#parents">Parents</a>
-      <a href="#holiday">Holiday Reservations</a>
-      <a href="#testimonials">Testimonials</a>
+      <a href="#reservation">Reservation</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
 </header>
 
-<!-- HERO SECTION -->
+<!-- HOME -->
 <section class="hero" id="home">
-  <div class="container hero-grid">
-    <div>
-      <h1>Find Your Forever Companion</h1>
+  <div class="hero-content">
+    <h1>Welcome to Royal Cavapoo Puppies</h1>
 
-      <p>
-        Welcome to Royal Cavapoo Puppies. Discover our adorable Cavapoo
-        puppies and learn more about the loving companions who may become
-        a cherished part of your family.
-      </p>
+    <p>
+      Discover loving, adorable Cavapoo companions ready to bring happiness,
+      warmth, and unforgettable memories into your home.
+    </p>
 
-      <a href="#puppies" class="btn">Meet Our Puppies</a>
-    </div>
+    <a href="#puppies" class="btn">Meet Our Puppies</a>
+    <a href="#contact" class="btn btn-light">Contact Us</a>
+  </div>
+</section>
 
-    <div>
-      <img src="Homepage.jpg" alt="Royal Cavapoo Puppies homepage">
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div>
+        <img src="Homepage.jpg" alt="Royal Cavapoo Puppies">
+      </div>
+
+      <div>
+        <h2>About Royal Cavapoo Puppies</h2>
+
+        <p>
+          Welcome to Royal Cavapoo Puppies, where we celebrate the loving
+          companionship and wonderful personalities of Cavapoos.
+        </p>
+
+        <p>
+          Our goal is to help families find a puppy that fits their home,
+          lifestyle, and expectations. We encourage every interested family
+          to ask questions and learn about each puppy before making a decision.
+        </p>
+
+        <p>
+          We believe choosing a puppy should be a thoughtful and enjoyable
+          experience, with clear communication throughout the process.
+        </p>
+
+        <a href="#contact" class="btn">Get in Touch</a>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- AVAILABLE PUPPIES -->
-<section id="puppies">
+<!-- PUPPIES -->
+<section id="puppies" class="highlight">
   <div class="container">
-
     <div class="section-title">
-      <h2>Meet Our Adorable Puppies</h2>
-
+      <h2>Meet Our Cavapoo Puppies</h2>
       <p>
-        Each puppy has a unique personality and plenty of love to share.
-        Contact us through the inquiry form to ask about a puppy.
+        Browse our puppy gallery and contact us for current availability
+        and additional information.
       </p>
     </div>
 
@@ -581,655 +443,335 @@ footer p {
 
       <div class="puppy-card">
         <img src="Bella.jpg" alt="Bella the Cavapoo puppy">
-
         <div class="puppy-info">
           <h3>Bella</h3>
-          <p>A sweet and affectionate little companion with a lovely personality.</p>
-          <p><strong>Age:</strong> 10 weeks</p>
+          <p>Breed: Cavapoo</p>
+          <p>Age: 10 weeks</p>
           <p class="price">$1,000</p>
-
-          <button class="btn puppy-inquiry" type="button" data-puppy="Bella">
-            Inquire About Bella
-          </button>
+          <button class="btn puppy-btn" data-puppy="Bella">Ask About Bella</button>
         </div>
       </div>
 
       <div class="puppy-card">
         <img src="Molly.jpg" alt="Molly the Cavapoo puppy">
-
         <div class="puppy-info">
           <h3>Molly</h3>
-          <p>A delightful puppy with a gentle nature and a playful spirit.</p>
-          <p><strong>Age:</strong> 10 weeks</p>
+          <p>Breed: Cavapoo</p>
+          <p>Age: 10 weeks</p>
           <p class="price">$1,000</p>
-
-          <button class="btn puppy-inquiry" type="button" data-puppy="Molly">
-            Inquire About Molly
-          </button>
+          <button class="btn puppy-btn" data-puppy="Molly">Ask About Molly</button>
         </div>
       </div>
 
       <div class="puppy-card">
         <img src="Hugo.jpg" alt="Hugo the Cavapoo puppy">
-
         <div class="puppy-info">
           <h3>Hugo</h3>
-          <p>A charming little puppy ready to bring happiness and companionship.</p>
-          <p><strong>Age:</strong> 10 weeks</p>
+          <p>Breed: Cavapoo</p>
+          <p>Age: 10 weeks</p>
           <p class="price">$1,000</p>
-
-          <button class="btn puppy-inquiry" type="button" data-puppy="Hugo">
-            Inquire About Hugo
-          </button>
+          <button class="btn puppy-btn" data-puppy="Hugo">Ask About Hugo</button>
         </div>
       </div>
 
       <div class="puppy-card">
         <img src="Bruno.jpg" alt="Bruno the Cavapoo puppy">
-
         <div class="puppy-info">
           <h3>Bruno</h3>
-          <p>A lovable puppy with a fun-loving personality and a sweet expression.</p>
-          <p><strong>Age:</strong> 10 weeks</p>
+          <p>Breed: Cavapoo</p>
+          <p>Age: 10 weeks</p>
           <p class="price">$1,000</p>
-
-          <button class="btn puppy-inquiry" type="button" data-puppy="Bruno">
-            Inquire About Bruno
-          </button>
+          <button class="btn puppy-btn" data-puppy="Bruno">Ask About Bruno</button>
         </div>
       </div>
 
       <div class="puppy-card">
         <img src="Suzy.jpg" alt="Suzy the Cavapoo puppy">
-
         <div class="puppy-info">
           <h3>Suzy</h3>
-          <p>A precious little puppy with a cheerful personality and lots of charm.</p>
-          <p><strong>Age:</strong> 10 weeks</p>
+          <p>Breed: Cavapoo</p>
+          <p>Age: 10 weeks</p>
           <p class="price">$1,000</p>
-
-          <button class="btn puppy-inquiry" type="button" data-puppy="Suzy">
-            Inquire About Suzy
-          </button>
+          <button class="btn puppy-btn" data-puppy="Suzy">Ask About Suzy</button>
         </div>
       </div>
 
       <div class="puppy-card">
         <img src="Luna.jpg" alt="Luna the Cavapoo puppy">
-
         <div class="puppy-info">
-          <h3>Luna – The Little Sunshine</h3>
-
-          <p>
-            Luna is a delightful, cheerful puppy who brings warmth and
-            happiness wherever she goes. Her playful spirit and loving
-            personality make her a wonderful companion.
-          </p>
-
-          <p><strong>Age:</strong> 10 weeks</p>
+          <h3>Luna</h3>
+          <p>Breed: Cavapoo</p>
+          <p>Age: 10 weeks</p>
           <p class="price">$1,000</p>
-
-          <button class="btn puppy-inquiry" type="button" data-puppy="Luna">
-            Inquire About Luna
-          </button>
+          <button class="btn puppy-btn" data-puppy="Luna">Ask About Luna</button>
         </div>
       </div>
 
       <div class="puppy-card">
         <img src="Theo.jpg" alt="Theo the Cavapoo puppy">
-
         <div class="puppy-info">
-          <h3>Theo – The Curious Explorer</h3>
-
-          <p>
-            Theo is an adventurous little boy who loves discovering new
-            things. Intelligent, playful, and affectionate, he is always
-            ready for fun and exciting adventures.
-          </p>
-
-          <p><strong>Age:</strong> 10 weeks</p>
+          <h3>Theo</h3>
+          <p>Breed: Cavapoo</p>
+          <p>Age: 10 weeks</p>
           <p class="price">$1,000</p>
-
-          <button class="btn puppy-inquiry" type="button" data-puppy="Theo">
-            Inquire About Theo
-          </button>
+          <button class="btn puppy-btn" data-puppy="Theo">Ask About Theo</button>
         </div>
       </div>
 
       <div class="puppy-card">
         <img src="Leo.jpg" alt="Leo the Cavapoo puppy">
-
         <div class="puppy-info">
-          <h3>Leo – The Charming Little Star</h3>
-
-          <p>
-            Leo is a lovable, confident puppy with a heart full of affection.
-            His playful energy and sweet nature make him a delightful
-            addition to any loving home.
-          </p>
-
-          <p><strong>Age:</strong> 10 weeks</p>
+          <h3>Leo</h3>
+          <p>Breed: Cavapoo</p>
+          <p>Age: 10 weeks</p>
           <p class="price">$1,000</p>
-
-          <button class="btn puppy-inquiry" type="button" data-puppy="Leo">
-            Inquire About Leo
-          </button>
+          <button class="btn puppy-btn" data-puppy="Leo">Ask About Leo</button>
         </div>
       </div>
 
     </div>
-  </div>
-</section>
-
-<!-- ABOUT US -->
-<section class="about">
-  <div class="container about-grid">
-
-    <div>
-      <img src="Parents1.jpg" alt="Royal Cavapoo Puppies family">
-    </div>
-
-    <div>
-      <h2>Welcome to Our Cavapoo Family</h2>
-
-      <p>
-        At Royal Cavapoo Puppies, we believe that welcoming a puppy into
-        your home is a special experience. We invite you to learn about
-        our puppies and ask questions before making a decision.
-      </p>
-
-      <p style="margin-top:15px;">
-        Our goal is to help prospective families find the information
-        they need when considering a Cavapoo companion.
-      </p>
-    </div>
-
   </div>
 </section>
 
 <!-- PARENTS -->
 <section id="parents">
   <div class="container">
-
     <div class="section-title">
-      <h2>Our Loving Cavapoo Parents</h2>
-
+      <h2>Meet the Parents</h2>
       <p>
-        Our beautiful Cavapoo parents are cherished for their affectionate,
-        gentle, and friendly personalities. Their loving nature and
-        wonderful companionship make them an important part of our
-        Cavapoo family.
+        Learn more about the parent dogs and their role in our Cavapoo family.
+        Contact us for additional information.
       </p>
     </div>
 
-    <div class="parent-grid">
-      <img src="Parents1.jpg" alt="Cavapoo parent photo 1">
-      <img src="Parents2.jpg" alt="Cavapoo parent photo 2">
-      <img src="Parents3.jpg" alt="Cavapoo parent photo 3">
-      <img src="Parents4.jpg" alt="Cavapoo parent photo 4">
+    <div class="parents-grid">
+      <img src="Parents1.jpg" alt="Cavapoo parent dog">
+      <img src="Parents2.jpg" alt="Cavapoo parent dog">
+      <img src="Parents3.jpg" alt="Cavapoo parent dog">
+      <img src="Parents4.jpg" alt="Cavapoo parent dog">
     </div>
-
   </div>
 </section>
 
-<!-- CHRISTMAS AND NEW YEAR RESERVATIONS -->
-<section class="holiday" id="holiday">
+<!-- HOLIDAY RESERVATION -->
+<section id="reservation" class="highlight">
   <div class="container">
-
-    <h2>Christmas & New Year Litter Reservations</h2>
-
-    <p class="holiday-intro">
-      Make the holiday season extra special with a loving Cavapoo companion.
-      Contact us to ask about our Christmas and New Year litter.
-    </p>
-
-    <div class="holiday-details">
-      <h3>Holiday Litter Reservation Information</h3>
-
-      <p><strong>Puppy Price:</strong> $1,000</p>
-      <p><strong>Refundable Deposit:</strong> $400</p>
-      <p><strong>Remaining Balance:</strong> $600</p>
-      <p><strong>Spots:</strong> Please contact us to confirm availability.</p>
-
-      <p class="holiday-note">
-        Puppy details, availability, reservation conditions, and timing
-        must be confirmed directly before making any payment.
-      </p>
+    <div class="section-title">
+      <h2>Christmas & New Year Litter Reservation</h2>
+      <p>Contact us to ask about reserving a puppy from our upcoming litter.</p>
     </div>
 
-    <div class="holiday-form-wrapper">
-
-      <h3>Holiday Litter Inquiry</h3>
+    <div class="reservation-box">
+      <h3>Holiday Litter Reservations</h3>
 
       <p>
-        Complete the form below to tell us about your holiday puppy inquiry.
+        We are accepting inquiries for our December/Christmas and New Year litter.
       </p>
 
-      <form class="holiday-form"
-            action="https://formspree.io/f/xvkklwvl"
-            method="POST">
+      <ul>
+        <li>Reservation deposit: $400</li>
+        <li>Deposit described as refundable, subject to the agreed reservation terms</li>
+        <li>Remaining balance: $600</li>
+        <li>Puppy price: $1,000</li>
+      </ul>
 
-        <label for="holiday-name">Your Full Name</label>
-        <input type="text"
-               id="holiday-name"
-               name="Customer Name"
-               autocomplete="name"
-               required>
+      <div class="notice">
+        <strong>Please note:</strong> Submitting this form is an inquiry, not
+        confirmation of a reservation. Please discuss availability, refund
+        conditions, payment details, and the written reservation terms with us
+        before sending money.
+      </div>
 
-        <label for="holiday-email">Your Email Address</label>
-        <input type="email"
-               id="holiday-email"
-               name="Email"
-               autocomplete="email"
-               required>
+      <a href="#holiday-form" class="btn">Submit Reservation Inquiry</a>
+    </div>
+  </div>
+</section>
+
+<!-- HOLIDAY FORM -->
+<section id="holiday-form">
+  <div class="container">
+    <div class="section-title">
+      <h2>Holiday Reservation Inquiry</h2>
+      <p>Complete the form to contact us about the holiday litter.</p>
+    </div>
+
+    <div class="form-container">
+      <form action="https://formspree.io/f/xvkklwvl" method="POST">
+
+        <input type="hidden" name="Inquiry Type" value="Holiday Litter Reservation">
+
+        <label for="holiday-name">Full Name</label>
+        <input type="text" id="holiday-name" name="Full Name" required>
+
+        <label for="holiday-email">Email Address</label>
+        <input type="email" id="holiday-email" name="Email" required>
 
         <label for="holiday-phone">Phone Number</label>
-        <input type="tel"
-               id="holiday-phone"
-               name="Phone Number"
-               autocomplete="tel">
+        <input type="tel" id="holiday-phone" name="Phone Number" required>
+
+        <label for="holiday-puppy">Preferred Puppy</label>
+        <select id="holiday-puppy" name="Preferred Puppy">
+          <option value="">No preference yet</option>
+          <option value="Bella">Bella</option>
+          <option value="Molly">Molly</option>
+          <option value="Hugo">Hugo</option>
+          <option value="Bruno">Bruno</option>
+          <option value="Suzy">Suzy</option>
+          <option value="Luna">Luna</option>
+          <option value="Theo">Theo</option>
+          <option value="Leo">Leo</option>
+        </select>
 
         <label for="holiday-payment">Preferred Payment Method</label>
-        <select id="holiday-payment"
-                name="Preferred Payment Method"
-                required>
+        <select id="holiday-payment" name="Preferred Payment Method" required>
           <option value="">Select a payment method</option>
           <option value="Cash App">Cash App</option>
           <option value="Apple Pay">Apple Pay</option>
           <option value="Zelle">Zelle</option>
           <option value="Chime">Chime</option>
+          <option value="Venmo">Venmo</option>
+          <option value="PayPal">PayPal</option>
         </select>
 
-        <label for="holiday-choice">Which Litter Are You Interested In?</label>
-        <select id="holiday-choice"
-                name="Holiday Litter"
-                required>
-          <option value="">Select a litter</option>
-          <option value="Christmas Litter">Christmas Litter</option>
-          <option value="New Year Litter">New Year Litter</option>
-          <option value="Christmas and New Year Litter">Christmas & New Year Litter</option>
-        </select>
+        <label for="holiday-message">Additional Information</label>
+        <textarea id="holiday-message" name="Message" placeholder="Tell us about your reservation inquiry"></textarea>
 
-        <div id="holiday-detail-preview" class="puppy-detail-preview">
-          <div>
-            <h4>Holiday Litter Details</h4>
-            <p>Age: Details to be confirmed</p>
-            <p>Total puppy price: $1,000</p>
-            <p>Deposit: $400</p>
-            <p>Remaining balance: $600</p>
-            <p>Individual puppy details and availability must be confirmed.</p>
-          </div>
-        </div>
-
-        <input type="hidden"
-               id="holiday-details-hidden"
-               name="Holiday Reservation Details">
-
-        <label for="holiday-timing">Preferred Puppy Arrival Timing</label>
-        <select id="holiday-timing" name="Preferred Timing" required>
-          <option value="">Select preferred timing</option>
-          <option value="Before Christmas">Before Christmas</option>
-          <option value="Around Christmas">Around Christmas</option>
-          <option value="Before New Year">Before New Year</option>
-          <option value="Around New Year">Around New Year</option>
-          <option value="Flexible Timing">Flexible timing</option>
-        </select>
-
-        <label for="holiday-message">Your Message</label>
-        <textarea id="holiday-message"
-                  name="Message"
-                  placeholder="Tell us about your holiday puppy inquiry..."
-                  required></textarea>
-
-        <input type="hidden"
-               name="_subject"
-               value="Christmas and New Year Litter Inquiry">
-
-        <button class="btn" type="submit">
-          Submit Holiday Inquiry
-        </button>
-
-        <p class="form-note">
-          This form sends an inquiry only and does not confirm a reservation.
-          Please do not submit payment details through this form.
-        </p>
-
+        <button type="submit" class="btn">Send Reservation Inquiry</button>
       </form>
     </div>
-
-    <p>Prefer to contact us directly?</p>
-
-    <a class="btn"
-       href="sms:+19375185268?body=Hello%20Royal%20Cavapoo%20Puppies%2C%20I%20am%20interested%20in%20the%20holiday%20litter.">
-      Text Us About Holiday Reservations
-    </a>
-
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
-<section id="testimonials">
+<!-- REGULAR INQUIRY -->
+<section id="contact">
   <div class="container">
-
     <div class="section-title">
-      <h2>Happy Families</h2>
-      <p>Customer experiences and feedback.</p>
+      <h2>Contact Us About a Puppy</h2>
+      <p>
+        Interested in one of our puppies? Send us an inquiry and we will
+        get back to you.
+      </p>
     </div>
 
-    <div class="testimonial-grid">
+    <div class="form-container">
+      <form action="https://formspree.io/f/xvkklwvl" method="POST">
 
-      <div class="testimonial">
-        <p>“Our experience with Royal Cavapoo Puppies was wonderful. Our little Cavapoo has brought so much happiness into our home!”</p>
-        <h4>Customer Review</h4>
-      </div>
+        <input type="hidden" name="Inquiry Type" value="Puppy Inquiry">
 
-      <div class="testimonial">
-        <p>“Our puppy is adorable, affectionate, and has quickly become a favorite family companion.”</p>
-        <h4>Customer Review</h4>
-      </div>
+        <label for="customer-name">Full Name</label>
+        <input type="text" id="customer-name" name="Full Name" required>
 
-      <div class="testimonial">
-        <p>“We appreciated having our questions answered while learning about our new puppy.”</p>
-        <h4>Customer Review</h4>
-      </div>
+        <label for="customer-email">Email Address</label>
+        <input type="email" id="customer-email" name="Email" required>
 
-      <div class="testimonial">
-        <p>“Our Cavapoo has brought so much joy and companionship into our home.”</p>
-        <h4>Customer Review</h4>
-      </div>
+        <label for="customer-phone">Phone Number</label>
+        <input type="tel" id="customer-phone" name="Phone Number" required>
 
+        <label for="customer-puppy">Which Puppy Are You Interested In?</label>
+        <select id="customer-puppy" name="Puppy Name" required>
+          <option value="">Select a puppy</option>
+          <option value="Bella">Bella</option>
+          <option value="Molly">Molly</option>
+          <option value="Hugo">Hugo</option>
+          <option value="Bruno">Bruno</option>
+          <option value="Suzy">Suzy</option>
+          <option value="Luna">Luna</option>
+          <option value="Theo">Theo</option>
+          <option value="Leo">Leo</option>
+        </select>
+
+        <label for="customer-payment">Preferred Payment Method</label>
+        <select id="customer-payment" name="Preferred Payment Method" required>
+          <option value="">Select a payment method</option>
+          <option value="Cash App">Cash App</option>
+          <option value="Apple Pay">Apple Pay</option>
+          <option value="Zelle">Zelle</option>
+          <option value="Chime">Chime</option>
+          <option value="Venmo">Venmo</option>
+          <option value="PayPal">PayPal</option>
+        </select>
+
+        <label for="customer-message">Your Message</label>
+        <textarea id="customer-message" name="Message" placeholder="Ask us about puppy availability, details, or next steps"></textarea>
+
+        <button type="submit" class="btn">Send Puppy Inquiry</button>
+      </form>
     </div>
   </div>
 </section>
 
-<!-- CONTACT AND INQUIRY FORM -->
-<section class="contact" id="contact">
-  <div class="container contact-grid">
-
-    <div class="contact-details">
-      <h2>Contact Royal Cavapoo Puppies</h2>
-
-      <p>
-        Interested in one of our puppies? Use the inquiry form to send
-        your questions.
-      </p>
-
-      <p>
-        <strong>Email:</strong><br>
-        <a href="mailto:royalcavapoopuppies4@gmail.com">
-          royalcavapoopuppies4@gmail.com
-        </a>
-      </p>
-
-      <p>
-        <strong>Phone:</strong><br>
-        <a href="tel:+19375185268">+1 (937) 518-5268</a>
-      </p>
-
-      <p>You can contact us by phone, SMS/text, or email.</p>
-
-      <a class="btn btn-dark"
-         href="sms:+19375185268?body=Hello%20Royal%20Cavapoo%20Puppies%2C%20I%20would%20like%20more%20information%20about%20your%20puppies.">
-        Send Us a Text
-      </a>
+<!-- CONTACT DETAILS -->
+<section class="highlight">
+  <div class="container">
+    <div class="section-title">
+      <h2>Get in Touch</h2>
+      <p>We welcome your questions about our puppies and reservation process.</p>
     </div>
 
-    <form action="https://formspree.io/f/xvkklwvl"
-          method="POST">
+    <div class="contact-grid">
 
-      <h3>Puppy Inquiry Form</h3>
-
-      <label for="customer-name">Your Full Name</label>
-      <input type="text"
-             id="customer-name"
-             name="Customer Name"
-             placeholder="Enter your full name"
-             autocomplete="name"
-             required>
-
-      <label for="customer-email">Your Email Address</label>
-      <input type="email"
-             id="customer-email"
-             name="Email"
-             placeholder="Enter your email address"
-             autocomplete="email"
-             required>
-
-      <label for="customer-phone">Phone Number</label>
-      <input type="tel"
-             id="customer-phone"
-             name="Phone Number"
-             placeholder="Enter your phone number"
-             autocomplete="tel">
-
-      <label for="customer-payment">Preferred Payment Method</label>
-      <select id="customer-payment"
-              name="Preferred Payment Method"
-              required>
-        <option value="">Select a payment method</option>
-        <option value="Cash App">Cash App</option>
-        <option value="Apple Pay">Apple Pay</option>
-        <option value="Zelle">Zelle</option>
-        <option value="Chime">Chime</option>
-      </select>
-
-      <label for="puppy-choice">Which Puppy Are You Interested In?</label>
-      <select id="puppy-choice"
-              name="Puppy Interested In"
-              required>
-        <option value="">Select a puppy</option>
-        <option value="Bella">Bella — $1,000</option>
-        <option value="Molly">Molly — $1,000</option>
-        <option value="Hugo">Hugo — $1,000</option>
-        <option value="Bruno">Bruno — $1,000</option>
-        <option value="Suzy">Suzy — $1,000</option>
-        <option value="Luna">Luna — $1,000</option>
-        <option value="Theo">Theo — $1,000</option>
-        <option value="Leo">Leo — $1,000</option>
-        <option value="General Inquiry">General Inquiry</option>
-      </select>
-
-      <!-- Automatically displayed puppy details -->
-      <div id="puppy-detail-preview"
-           class="puppy-detail-preview"
-           aria-live="polite">
-
-        <img id="selected-puppy-image"
-             src=""
-             alt="Selected puppy photo">
-
-        <div>
-          <h4 id="selected-puppy-name"></h4>
-          <p id="selected-puppy-gender"></p>
-          <p id="selected-puppy-age"></p>
-          <p id="selected-puppy-price"></p>
-          <p id="selected-puppy-description"></p>
-        </div>
+      <div class="contact-card">
+        <h3>Phone & Text</h3>
+        <p>
+          <a href="tel:+19375185268">+1 (937) 518-5268</a>
+        </p>
+        <p>Call or text us with your questions.</p>
       </div>
 
-      <input type="hidden"
-             id="puppy-details-hidden"
-             name="Selected Puppy Details"
-             value="">
+      <div class="contact-card">
+        <h3>Email</h3>
+        <p>
+          <a href="mailto:royalcavapoopuppies4@gmail.com">
+            royalcavapoopuppies4@gmail.com
+          </a>
+        </p>
+      </div>
 
-      <label for="customer-message">Your Message</label>
-      <textarea id="customer-message"
-                name="Message"
-                placeholder="Write your questions or inquiry here..."
-                required></textarea>
+      <div class="contact-card">
+        <h3>Website Inquiry</h3>
+        <p>Use our contact forms to send a puppy or reservation inquiry.</p>
+        <a href="#contact" class="btn">Contact Us</a>
+      </div>
 
-      <input type="hidden"
-             name="_subject"
-             value="New Royal Cavapoo Puppies Website Inquiry">
-
-      <button class="btn" type="submit">
-        Send Puppy Inquiry
-      </button>
-
-      <p class="form-note">
-        Your inquiry will be sent through Formspree.
-        Please do not include payment details or sensitive personal information.
-      </p>
-
-    </form>
-
+    </div>
   </div>
 </section>
 
 <footer>
-  <p><strong>Royal Cavapoo Puppies</strong></p>
-  <p>Helping families learn about their future companions.</p>
-  <p>&copy; <span id="year"></span> Royal Cavapoo Puppies. All rights reserved.</p>
+  <div class="container">
+    <p><strong>Royal Cavapoo Puppies</strong></p>
+    <p>Helping families connect with loving Cavapoo companions.</p>
+    <p>
+      Phone:
+      <a href="tel:+19375185268">+1 (937) 518-5268</a>
+    </p>
+    <p>
+      Email:
+      <a href="mailto:royalcavapoopuppies4@gmail.com">
+        royalcavapoopuppies4@gmail.com
+      </a>
+    </p>
+    <p>&copy; <span id="year"></span> Royal Cavapoo Puppies. All rights reserved.</p>
+  </div>
 </footer>
 
 <script>
-document.getElementById("year").textContent = new Date().getFullYear();
+  // Automatically update the copyright year
+  document.getElementById("year").textContent = new Date().getFullYear();
 
-const puppyData = {
-  "Bella": {
-    image: "Bella.jpg",
-    gender: "Please confirm with us",
-    age: "10 weeks",
-    price: "$1,000",
-    description: "A sweet and affectionate little companion with a lovely personality."
-  },
+  // Automatically select the puppy when a puppy button is clicked
+  document.querySelectorAll(".puppy-btn").forEach(function(button) {
+    button.addEventListener("click", function() {
+      const puppyName = this.getAttribute("data-puppy");
 
-  "Molly": {
-    image: "Molly.jpg",
-    gender: "Please confirm with us",
-    age: "10 weeks",
-    price: "$1,000",
-    description: "A delightful puppy with a gentle nature and a playful spirit."
-  },
+      const puppySelect = document.getElementById("customer-puppy");
+      puppySelect.value = puppyName;
 
-  "Hugo": {
-    image: "Hugo.jpg",
-    gender: "Please confirm with us",
-    age: "10 weeks",
-    price: "$1,000",
-    description: "A charming little puppy ready to bring happiness and companionship."
-  },
-
-  "Bruno": {
-    image: "Bruno.jpg",
-    gender: "Please confirm with us",
-    age: "10 weeks",
-    price: "$1,000",
-    description: "A lovable puppy with a fun-loving personality and a sweet expression."
-  },
-
-  "Suzy": {
-    image: "Suzy.jpg",
-    gender: "Please confirm with us",
-    age: "10 weeks",
-    price: "$1,000",
-    description: "A precious little puppy with a cheerful personality and lots of charm."
-  },
-
-  "Luna": {
-    image: "Luna.jpg",
-    gender: "Please confirm with us",
-    age: "10 weeks",
-    price: "$1,000",
-    description: "Luna is a delightful, cheerful puppy who brings warmth and happiness wherever she goes. Her playful spirit and loving personality make her a wonderful companion."
-  },
-
-  "Theo": {
-    image: "Theo.jpg",
-    gender: "Male",
-    age: "10 weeks",
-    price: "$1,000",
-    description: "Theo is an adventurous little boy who loves discovering new things. Intelligent, playful, and affectionate, he is always ready for fun and exciting adventures."
-  },
-
-  "Leo": {
-    image: "Leo.jpg",
-    gender: "Please confirm with us",
-    age: "10 weeks",
-    price: "$1,000",
-    description: "Leo is a lovable, confident puppy with a heart full of affection. His playful energy and sweet nature make him a delightful addition to any loving home."
-  }
-};
-
-const puppySelect = document.getElementById("puppy-choice");
-const preview = document.getElementById("puppy-detail-preview");
-const hiddenDetails = document.getElementById("puppy-details-hidden");
-
-function showPuppyDetails(name) {
-  const puppy = puppyData[name];
-
-  if (!puppy) {
-    preview.classList.remove("active");
-    hiddenDetails.value = name || "";
-    return;
-  }
-
-  document.getElementById("selected-puppy-image").src = puppy.image;
-
-  document.getElementById("selected-puppy-image").alt =
-    name + " the Cavapoo puppy";
-
-  document.getElementById("selected-puppy-name").textContent = name;
-
-  document.getElementById("selected-puppy-gender").textContent =
-    "Gender: " + puppy.gender;
-
-  document.getElementById("selected-puppy-age").textContent =
-    "Age: " + puppy.age;
-
-  document.getElementById("selected-puppy-price").textContent =
-    "Price: " + puppy.price;
-
-  document.getElementById("selected-puppy-description").textContent =
-    puppy.description;
-
-  preview.classList.add("active");
-
-  hiddenDetails.value =
-    "Name: " + name +
-    " | Gender: " + puppy.gender +
-    " | Age: " + puppy.age +
-    " | Price: " + puppy.price +
-    " | Description: " + puppy.description;
-}
-
-puppySelect.addEventListener("change", function() {
-  showPuppyDetails(this.value);
-});
-
-document.querySelectorAll(".puppy-inquiry").forEach(function(button) {
-  button.addEventListener("click", function() {
-    puppySelect.value = button.dataset.puppy;
-
-    showPuppyDetails(puppySelect.value);
-
-    document.getElementById("contact").scrollIntoView({
-      behavior: "smooth"
+      document.getElementById("contact").scrollIntoView({
+        behavior: "smooth"
+      });
     });
   });
-});
-
-const holidaySelect = document.getElementById("holiday-choice");
-const holidayPreview = document.getElementById("holiday-detail-preview");
-const holidayHidden = document.getElementById("holiday-details-hidden");
-
-holidaySelect.addEventListener("change", function() {
-  const choice = this.value;
-
-  if (choice) {
-    holidayPreview.classList.add("active");
-
-    holidayHidden.value =
-      choice +
-      " | Total puppy price: $1,000" +
-      " | Deposit: $400" +
-      " | Remaining balance: $600" +
-      " | Puppy age, individual details, availability, and timing must be confirmed.";
-  } else {
-    holidayPreview.classList.remove("active");
-    holidayHidden.value = "";
-  }
-});
 </script>
 
 </body>
